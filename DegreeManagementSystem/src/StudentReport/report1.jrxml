@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="574a8644-4bf1-4ad0-8d5c-e49d864a5497">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     registerform.`Name` AS registerform_Name,
+     registerform.`Father` AS registerform_Father,
+     registerform.`ID` AS registerform_ID,
+     registerform.`PhoneNo` AS registerform_PhoneNo,
+     registerform.`Email` AS registerform_Email,
+     registerform.`CNIC` AS registerform_CNIC,
+     registerform.`Gender` AS registerform_Gender,
+     registerform.`Department` AS registerform_Department
+FROM
+     `registerform` registerform]]>
+	</queryString>
+	<field name="registerform_Name" class="java.lang.String"/>
+	<field name="registerform_Father" class="java.lang.String"/>
+	<field name="registerform_ID" class="java.lang.String"/>
+	<field name="registerform_PhoneNo" class="java.lang.String"/>
+	<field name="registerform_Email" class="java.lang.String"/>
+	<field name="registerform_CNIC" class="java.lang.String"/>
+	<field name="registerform_Gender" class="java.lang.String"/>
+	<field name="registerform_Department" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="31" y="-9" width="492" height="88" uuid="03d85e0c-227e-4814-9080-abe5130b5510"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMIU STUDENT RECORDS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="2" width="32" height="34" uuid="770099bc-0a07-41dc-bb0a-0ad52e01d255"/>
+				<textElement>
+					<font fontName="Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="2" width="70" height="34" uuid="490d68a0-4eff-47e3-b69b-80b913066daa"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="2" width="68" height="34" uuid="6ed7b830-1338-4d0b-ac22-500743c93ea7"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="0" width="136" height="36" uuid="ad0bdb7d-24a8-4dba-b40e-26302a5c07aa"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="17" y="26" width="100" height="20" uuid="cdcd6ff0-21a8-491c-99c6-913cfcf4f1d8"/>
+				<textFieldExpression><![CDATA[$F{registerform_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="26" width="100" height="20" uuid="a386970c-b9e4-44cb-8b21-a53c8866f824"/>
+				<textFieldExpression><![CDATA[$F{registerform_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="26" width="100" height="20" uuid="3274f7fc-5775-42e3-955c-1bd1d8e861e2"/>
+				<textFieldExpression><![CDATA[$F{registerform_Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="26" width="100" height="20" uuid="b94160fc-156e-414c-9858-d6bf8d61e988"/>
+				<textFieldExpression><![CDATA[$F{registerform_Department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="25" width="100" height="20" uuid="e2411425-177d-4207-b8fc-c3e94c17c0ed"/>
+				<textFieldExpression><![CDATA[$F{registerform_Father}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
